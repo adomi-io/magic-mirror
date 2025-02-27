@@ -5,12 +5,6 @@
 Magic Mirror is an automation tool designed to sync a source GitHub repository with a destination repository. 
 This ensures that the latest updates from the source repository are copied and committed to the destination repository.
 
-## Features
-
-- **Automated Cloning**: Fetches both the source and destination repositories automatically.
-- **Efficient File Merging**: Copies only necessary files while excluding unnecessary ones like `.git`.
-- **Automated Commit & Push**: Detects changes, commits with a timestamped message, and pushes updates to the destination repository.
-
 ## Running with Docker
 
 We provide a pre-built Docker container hosted on GitHub Container Registry, making it easy to deploy and execute.

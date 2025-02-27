@@ -29,9 +29,7 @@ Execute the following command to start the sync process:
 docker run --rm \
   -e REPO_SOURCE=<your-source-repo> \
   -e REPO_DESTINATION=<your-destination-repo> \
-  -e API_KEY=<your-github-api-key> \
-  -e SOURCE_API_KEY=<optional-source-api-key> \
-  -e DESTINATION_API_KEY=<optional-destination-api-key> \
+  -e GH_TOKEN=<your-github-api-key> \
   -e BRANCH=master \
   ghcr.io/adomi-io/magic-mirror:latest
 ```
@@ -41,13 +39,6 @@ Alternatively, you can create a `.env` file with the required environment variab
 ```bash
 docker run --rm --env-file .env ghcr.io/adomi-io/magic-mirror:latest
 ```
-
-## How It Works
-
-1. **Cloning Repositories**: The script clones both the source and destination repositories into the `OUTPUT_PATH` directory.
-2. **File Synchronization**: Source files (excluding `.git`) are copied into a merged directory.
-3. **Change Detection**: The script checks for modifications in the merged folder.
-4. **Automated Commit & Push**: If changes are found, they are committed with a timestamped message and pushed to the destination repository.
 
 ## Troubleshooting
 
@@ -60,7 +51,4 @@ docker run --rm --env-file .env ghcr.io/adomi-io/magic-mirror:latest
 We welcome contributions! Feel free to submit pull requests to enhance functionality, improve security, or add new features. 
 Your feedback and suggestions are always appreciated.
 
-## License
-
-This project is licensed under the **MIT License**.
 

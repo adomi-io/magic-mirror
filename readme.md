@@ -27,8 +27,8 @@ Execute the following command to start the sync process:
 
 ```bash
 docker run --rm \
-  -e REPO_SOURCE=<your-source-repo> \
-  -e REPO_DESTINATION=<your-destination-repo> \
+  -e REPO_SOURCE=https://github.com/owner_name_here/repo_name_here.git \
+  -e REPO_DESTINATION=https://github.com/owner_name_here/repo_name_here.git \
   -e GH_TOKEN=<your-github-api-key> \
   -e BRANCH=master \
   ghcr.io/adomi-io/magic-mirror:latest
